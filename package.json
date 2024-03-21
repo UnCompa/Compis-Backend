@@ -1,12 +1,12 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.mjs",
+  "name": "compis-backend",
+  "version": "1.0.1",
+  "description": "backend para subir imagenes y otras cosas",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.mjs",
-    "dev": "nodemon src/index.mjs"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
