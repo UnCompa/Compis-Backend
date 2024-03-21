@@ -1,0 +1,21 @@
+POST http://localhost:3000/api/images/upload
+Content-Type: application/json
+
+{
+    "title": "XD",
+    "description": "Una imagen",
+    "url": "https://res.cloudinary.com/dgiq2rzid/image/upload/v1711053205/Test-compis/fsuh9ylt6cpz0qnv8uby.jpg"
+}
+### Ahora un GET
+GET http://localhost:3000/api/images
+### Ahora un PUT
+PUT http://localhost:3000/api/images/65fca508d37b541baa16b1b1
+Content-Type: application/json
+
+{
+    "title": "update",
+    "description": "Una imagen",
+    "url": "https://res.cloudinary.com/dgiq2rzid/image/upload/v1711053205/Test-compis/fsuh9ylt6cpz0qnv8uby.jpg"
+}
+### Ahora un DELETE
+DELETE http://localhost:3000/api/images/65fcaae6ec0936b5e2b7c549
