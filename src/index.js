@@ -14,7 +14,8 @@ app.get("/api/images", (req, res) => {
     });
 });
 app.get('/api/images/:id', (req, res) => {
-    Note.findById(req.params.id).then(image => {
+   const ID = req.params.id;
+    Image.findById(ID).then(image => {
         if (image) {
             res.json(image)
         } else {
