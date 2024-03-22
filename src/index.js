@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.get("/api/images", (req, res) => {
   Image.find({})
-    .sort({ createAt: -1 })
+    .sort({ updatedAt: -1 })
     .then((images) => {
       res.json(images);
     });
