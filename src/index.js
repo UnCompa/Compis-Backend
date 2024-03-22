@@ -13,6 +13,15 @@ app.get("/api/images", (req, res) => {
       res.json(images);
     });
 });
+app.get('/api/images/:id', (req, res) => {
+    Note.findById(req.params.id).then(image => {
+        if (image) {
+            res.json(image)
+        } else {
+            res.status(404).end()
+        }
+    })
+})
 app.post("/api/images/upload", (req, res) => {
   const body = req.body;
   console.log(body);
