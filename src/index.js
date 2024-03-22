@@ -33,6 +33,7 @@ app.post("/api/images/upload", (req, res) => {
     title: body.title,
     description: body.description,
     url: body.url,
+    publicId: body.publicId,
   });
   newImage
     .save()
@@ -51,6 +52,7 @@ app.put("/api/images/:id", (req, res) => {
     title: body.title,
     description: body.description,
     url: body.url,
+    publicId: body.publicId,
   };
   Image.findOneAndUpdate({ _id: ID }, updatedImage, {
     new: true,
