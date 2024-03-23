@@ -9,6 +9,15 @@ images.get("/api/images", (req, res) => {
       res.json(images);
     });
 });
+images.get("/api/images/:id", (req, res) => {
+  Image.findById(req.params.id).then((note) => {
+    if (note) {
+      res.json(note);
+    } else {
+      res.status(404).end();
+    }
+  });
+});
 images.get("/api/images/count", (req,res)=>{
     Image.countDocuments({}).then((count)=>{
         res.json(count)
