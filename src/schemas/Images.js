@@ -5,6 +5,7 @@ const imagesSchema = new Schema(
     title: String,
     description: String,
     url: String,
+    publicId: String,
   },
   { timestamps: true }
 );
