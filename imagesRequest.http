@@ -8,6 +8,8 @@ Content-Type: application/json
 }
 ### Ahora un GET
 GET http://localhost:3000/api/images
+### Ahora un GET para contar
+GET http://localhost:3000/api/images/count
 ### Ahora un PUT
 PUT http://localhost:3000/api/images/65fca508d37b541baa16b1b1
 Content-Type: application/json
