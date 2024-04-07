@@ -1,0 +1,19 @@
+GET  http://localhost:3000/api/upload/video
+### Post
+POST http://localhost:3000/api/upload/video/upload
+Content-Type: application/json
+
+{
+    "url": "https://firebasestorage.googleapis.com/v0/b/emi-web-f96bd.appspot.com/o/some-child?alt=media&token=3e403101-cfed-49b3-a84f-6e71d70c44e7"
+}
+### Por id
+GET http://localhost:3000/api/upload/video/6612eba38ac3e927dc04b98e
+### Borrar por id
+DELETE  http://localhost:3000/api/upload/video/6613133b60920da77b05d5bb
+### Update
+PUT http://localhost:3000/api/upload/video/6612eba38ac3e927dc04b98e
+Content-Type: application/json
+
+{
+    "url": "https://firebasestorage.googleapis.com/v0/b/emi-web-f96bd.appspot.com/o/some-child?alt=media&token=3e403101-cfed-49b3-a84f-6e71d70c44e7"
+}

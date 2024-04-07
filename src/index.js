@@ -5,6 +5,7 @@ import ImagesRouter from './router/imagesRouter.js'
 import NotasRouter from './router/notasRouter.js'
 import imagesUpload from "./router/UploadImgRouter.js";
 import musicUpload from "./router/UploadMusicRouter.js";
+import videoRouter from "./router/UploadVideoRouter.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(ImagesRouter)
 app.use(imagesUpload)
 app.use(musicUpload)
+app.use(videoRouter)
 app.use("/api", NotasRouter)
 
 app.get("/",(req,res)=>{
