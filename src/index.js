@@ -3,11 +3,15 @@ import cors from "cors";
 import "./connection.js";
 import ImagesRouter from './router/imagesRouter.js'
 import NotasRouter from './router/notasRouter.js'
+import imagesUpload from "./router/UploadImgRouter.js";
+import musicUpload from "./router/UploadMusicRouter.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
 // Rutas 
 app.use(ImagesRouter)
+app.use(imagesUpload)
+app.use(musicUpload)
 app.use("/api", NotasRouter)
 
 app.get("/",(req,res)=>{
